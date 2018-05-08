@@ -51,13 +51,10 @@ class DeckTest < Minitest::Test
       deck = Deck.new([card_1, card_2])
       round = Round.new(deck)
 
-      # guess = Guess.new("3 of Hearts", card_1)
       round.record_guess("3 of Hearts")
 
       assert_equal 1, round.guesses.count
     end
-    # round.guesses.count
-    # => 1
 end
 
 
