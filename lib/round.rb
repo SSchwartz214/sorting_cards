@@ -16,4 +16,8 @@ class Round
     @guesses << Guess.new(response, current_card)
   end
 
+  def number_correct
+    
+  end
+
 end
