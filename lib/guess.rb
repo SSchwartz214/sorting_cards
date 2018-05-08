@@ -11,6 +11,11 @@ class Guess
     response == card.correct_card
   end
 
-
-
+  def feedback
+    if correct?
+      "Correct!"
+    else
+      "Incorrect."
+    end
+  end
 end
