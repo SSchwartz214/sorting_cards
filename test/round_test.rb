@@ -65,7 +65,7 @@ class DeckTest < Minitest::Test
       assert_equal "Correct!", round.guesses.first.feedback
     end
 
-    def it_can_count_number_correct
+    def test_it_can_count_number_correct
       card_1 = Card.new("3","Hearts")
       card_2 = Card.new("4", "Clubs")
       deck = Deck.new([card_1, card_2])
