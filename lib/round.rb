@@ -15,6 +15,11 @@ class Round
 
   def record_guess(response)
     @guesses << Guess.new(response, current_card)
+    next_card
+  end
+
+  def next_card
+    @current_card_index += 1
   end
 
   def number_correct

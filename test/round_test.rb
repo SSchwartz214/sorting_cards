@@ -75,8 +75,19 @@ class DeckTest < Minitest::Test
 
       assert_equal 1, round.number_correct
     end
-    # round.number_correct
-    # => 1
+
+    def test_next_current_card
+      card_1 = Card.new("3","Hearts")
+      card_2 = Card.new("4", "Clubs")
+      deck = Deck.new([card_1, card_2])
+      round = Round.new(deck)
+
+      round.record_guess("3 of Hearts")
+
+      assert_equal card_2, round.current_card
+
+    end
+
 end
 
 
