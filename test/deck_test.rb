@@ -27,10 +27,11 @@ class DeckTest < Minitest::Test
 
   def test_it_can_sort
     card_1 = Card.new("4","Hearts")
-    card_2 = Card.new("3", "Clubs")
+    card_2 = Card.new("10", "Clubs")
     card_3 = Card.new("5", "Diamonds")
-    deck = Deck.new([card_1, card_2, card_3])
+    card_4 = Card.new("King", "Hearts")
+    deck = Deck.new([card_1, card_2, card_3, card_4])
 
-    assert_equal [card_2, card_1, card_3], deck.sort
+    assert_equal [card_1, card_3, card_2, card_4], deck.sort
   end
 end
