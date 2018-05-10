@@ -7,7 +7,7 @@ class Card
     @suit = suit
   end
 
-  def correct_card
+  def in_words
     "#{@value} of #{@suit}"
   end
 

@@ -8,7 +8,7 @@ class Guess
   end
 
   def correct?
-    response == card.correct_card
+    response == card.in_words
   end
 
   def feedback
