@@ -14,7 +14,7 @@ class Deck
     loop do
       swapped = false
       (n-1).times do |i|
-        if cards[i].value.to_i > cards[i + 1].value.to_i
+        if cards[i].numeric_value > cards[i + 1].numeric_value
           cards[i], cards[i + 1] = cards[i + 1], cards[i]
           swapped = true
         end

@@ -10,7 +10,7 @@ class CardTest < Minitest::Test
     assert_instance_of Card, card
   end
 
-  def attributes
+  def test_it_has_attributes
     card = Card.new("Ace", "Spades")
 
     assert_equal "Ace", card.value
